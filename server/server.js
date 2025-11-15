@@ -6,9 +6,6 @@ import PDFDocument from "pdfkit";
 import dayjs from "dayjs";
 import { v4 as uuidv4 } from "uuid";
 
-app.use(cors({
-  origin:["http://localhost:3000","https://ab-two-self.vercel.app/"]
-}))
 dotenv.config();
 
 const pool = new Pool({
@@ -17,9 +14,10 @@ const pool = new Pool({
 });
 
 const app = express();
-app.use(cors());
+app.use(cors( { origin:["http://localhost:3000","https://ab-two-self.vercel.app/"]}
+));
 app.use(express.json());
-app.use(express.static("docs"));
+app.use(express.static("client"));
 
 const PORT = process.env.PORT || 3000;
 
