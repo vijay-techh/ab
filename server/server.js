@@ -19,8 +19,6 @@ app.use(cors( { origin:["http://localhost:3000","https://ab-two-self.vercel.app/
 app.use(express.json());
 app.use(express.static("client"));
 
-const PORT = process.env.PORT || 3000;
-
 /* ============================================================
    1️⃣ NEW CUSTOMER + FIRST ORDER (FULLY FIXED)
 ============================================================ */
